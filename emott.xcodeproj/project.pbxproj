@@ -1,0 +1,681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD3DD466246F5FFD007B83D2 /* OpenWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3DD465246F5FFD007B83D2 /* OpenWeatherViewModel.swift */; };
+		CD3DD468246FA0F2007B83D2 /* NetworkStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3DD467246FA0F2007B83D2 /* NetworkStateMachine.swift */; };
+		CDA0B39F246A17CA005BF0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0B39E246A17CA005BF0E7 /* AppDelegate.swift */; };
+		CDA0B3A1246A17CA005BF0E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0B3A0246A17CA005BF0E7 /* SceneDelegate.swift */; };
+		CDA0B3A5246A17CE005BF0E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA0B3A4246A17CE005BF0E7 /* Assets.xcassets */; };
+		CDA0B3A8246A17CE005BF0E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA0B3A7246A17CE005BF0E7 /* Preview Assets.xcassets */; };
+		CDA0B3AB246A17CE005BF0E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA0B3A9246A17CE005BF0E7 /* LaunchScreen.storyboard */; };
+		CDA0B3B6246A17CE005BF0E7 /* emottTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0B3B5246A17CE005BF0E7 /* emottTests.swift */; };
+		CDA0B3C1246A17CE005BF0E7 /* emottUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0B3C0246A17CE005BF0E7 /* emottUITests.swift */; };
+		CDA0B3D2246B16F3005BF0E7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CDA0B3D1246B16F3005BF0E7 /* Alamofire */; };
+		CDA0B3D5246C8FA1005BF0E7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0B3D4246C8FA1005BF0E7 /* Store.swift */; };
+		CDA0B3D8246DCD49005BF0E7 /* OpenWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0B3D7246DCD49005BF0E7 /* OpenWeatherService.swift */; };
+		CDA0B3DB246DD101005BF0E7 /* Willow in Frameworks */ = {isa = PBXBuildFile; productRef = CDA0B3DA246DD101005BF0E7 /* Willow */; };
+		CDA0B3DD246DD376005BF0E7 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0B3DC246DD376005BF0E7 /* App.swift */; };
+		CDA0B3DF246DD54B005BF0E7 /* OpenWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0B3DE246DD54B005BF0E7 /* OpenWeather.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDA0B3B2246A17CE005BF0E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDA0B393246A17CA005BF0E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDA0B39A246A17CA005BF0E7;
+			remoteInfo = emott;
+		};
+		CDA0B3BD246A17CE005BF0E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDA0B393246A17CA005BF0E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDA0B39A246A17CA005BF0E7;
+			remoteInfo = emott;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD3DD465246F5FFD007B83D2 /* OpenWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherViewModel.swift; sourceTree = "<group>"; };
+		CD3DD467246FA0F2007B83D2 /* NetworkStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStateMachine.swift; sourceTree = "<group>"; };
+		CDA0B39B246A17CA005BF0E7 /* emott.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emott.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA0B39E246A17CA005BF0E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDA0B3A0246A17CA005BF0E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CDA0B3A4246A17CE005BF0E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDA0B3A7246A17CE005BF0E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CDA0B3AA246A17CE005BF0E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDA0B3AC246A17CE005BF0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDA0B3B1246A17CE005BF0E7 /* emottTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emottTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA0B3B5246A17CE005BF0E7 /* emottTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emottTests.swift; sourceTree = "<group>"; };
+		CDA0B3B7246A17CE005BF0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDA0B3BC246A17CE005BF0E7 /* emottUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = emottUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA0B3C0246A17CE005BF0E7 /* emottUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emottUITests.swift; sourceTree = "<group>"; };
+		CDA0B3C2246A17CE005BF0E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDA0B3D4246C8FA1005BF0E7 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		CDA0B3D7246DCD49005BF0E7 /* OpenWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherService.swift; sourceTree = "<group>"; };
+		CDA0B3DC246DD376005BF0E7 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		CDA0B3DE246DD54B005BF0E7 /* OpenWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeather.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDA0B398246A17CA005BF0E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA0B3DB246DD101005BF0E7 /* Willow in Frameworks */,
+				CDA0B3D2246B16F3005BF0E7 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA0B3AE246A17CE005BF0E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA0B3B9246A17CE005BF0E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD3DD464246F5FE7007B83D2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CD3DD465246F5FFD007B83D2 /* OpenWeatherViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CD3DD469246FAC69007B83D2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CDA0B3D7246DCD49005BF0E7 /* OpenWeatherService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CDA0B392246A17CA005BF0E7 = {
+			isa = PBXGroup;
+			children = (
+				CDA0B39D246A17CA005BF0E7 /* emott */,
+				CDA0B3B4246A17CE005BF0E7 /* emottTests */,
+				CDA0B3BF246A17CE005BF0E7 /* emottUITests */,
+				CDA0B39C246A17CA005BF0E7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDA0B39C246A17CA005BF0E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDA0B39B246A17CA005BF0E7 /* emott.app */,
+				CDA0B3B1246A17CE005BF0E7 /* emottTests.xctest */,
+				CDA0B3BC246A17CE005BF0E7 /* emottUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDA0B39D246A17CA005BF0E7 /* emott */ = {
+			isa = PBXGroup;
+			children = (
+				CD3DD469246FAC69007B83D2 /* Services */,
+				CD3DD464246F5FE7007B83D2 /* ViewModels */,
+				CDA0B3D3246C8F84005BF0E7 /* Models */,
+				CDA0B39E246A17CA005BF0E7 /* AppDelegate.swift */,
+				CDA0B3A0246A17CA005BF0E7 /* SceneDelegate.swift */,
+				CDA0B3DC246DD376005BF0E7 /* App.swift */,
+				CDA0B3A4246A17CE005BF0E7 /* Assets.xcassets */,
+				CDA0B3A9246A17CE005BF0E7 /* LaunchScreen.storyboard */,
+				CDA0B3AC246A17CE005BF0E7 /* Info.plist */,
+				CDA0B3A6246A17CE005BF0E7 /* Preview Content */,
+			);
+			path = emott;
+			sourceTree = "<group>";
+		};
+		CDA0B3A6246A17CE005BF0E7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CDA0B3A7246A17CE005BF0E7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CDA0B3B4246A17CE005BF0E7 /* emottTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDA0B3B5246A17CE005BF0E7 /* emottTests.swift */,
+				CDA0B3B7246A17CE005BF0E7 /* Info.plist */,
+			);
+			path = emottTests;
+			sourceTree = "<group>";
+		};
+		CDA0B3BF246A17CE005BF0E7 /* emottUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CDA0B3C0246A17CE005BF0E7 /* emottUITests.swift */,
+				CDA0B3C2246A17CE005BF0E7 /* Info.plist */,
+			);
+			path = emottUITests;
+			sourceTree = "<group>";
+		};
+		CDA0B3D3246C8F84005BF0E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CDA0B3D4246C8FA1005BF0E7 /* Store.swift */,
+				CDA0B3DE246DD54B005BF0E7 /* OpenWeather.swift */,
+				CD3DD467246FA0F2007B83D2 /* NetworkStateMachine.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDA0B39A246A17CA005BF0E7 /* emott */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA0B3C5246A17CE005BF0E7 /* Build configuration list for PBXNativeTarget "emott" */;
+			buildPhases = (
+				CDA0B397246A17CA005BF0E7 /* Sources */,
+				CDA0B398246A17CA005BF0E7 /* Frameworks */,
+				CDA0B399246A17CA005BF0E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = emott;
+			packageProductDependencies = (
+				CDA0B3D1246B16F3005BF0E7 /* Alamofire */,
+				CDA0B3DA246DD101005BF0E7 /* Willow */,
+			);
+			productName = emott;
+			productReference = CDA0B39B246A17CA005BF0E7 /* emott.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CDA0B3B0246A17CE005BF0E7 /* emottTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA0B3C8246A17CE005BF0E7 /* Build configuration list for PBXNativeTarget "emottTests" */;
+			buildPhases = (
+				CDA0B3AD246A17CE005BF0E7 /* Sources */,
+				CDA0B3AE246A17CE005BF0E7 /* Frameworks */,
+				CDA0B3AF246A17CE005BF0E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDA0B3B3246A17CE005BF0E7 /* PBXTargetDependency */,
+			);
+			name = emottTests;
+			productName = emottTests;
+			productReference = CDA0B3B1246A17CE005BF0E7 /* emottTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CDA0B3BB246A17CE005BF0E7 /* emottUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA0B3CB246A17CE005BF0E7 /* Build configuration list for PBXNativeTarget "emottUITests" */;
+			buildPhases = (
+				CDA0B3B8246A17CE005BF0E7 /* Sources */,
+				CDA0B3B9246A17CE005BF0E7 /* Frameworks */,
+				CDA0B3BA246A17CE005BF0E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDA0B3BE246A17CE005BF0E7 /* PBXTargetDependency */,
+			);
+			name = emottUITests;
+			productName = emottUITests;
+			productReference = CDA0B3BC246A17CE005BF0E7 /* emottUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDA0B393246A17CA005BF0E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Ehidiamen Ojielu";
+				TargetAttributes = {
+					CDA0B39A246A17CA005BF0E7 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					CDA0B3B0246A17CE005BF0E7 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = CDA0B39A246A17CA005BF0E7;
+					};
+					CDA0B3BB246A17CE005BF0E7 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = CDA0B39A246A17CA005BF0E7;
+					};
+				};
+			};
+			buildConfigurationList = CDA0B396246A17CA005BF0E7 /* Build configuration list for PBXProject "emott" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDA0B392246A17CA005BF0E7;
+			packageReferences = (
+				CDA0B3D0246B16F3005BF0E7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CDA0B3D9246DD101005BF0E7 /* XCRemoteSwiftPackageReference "Willow" */,
+			);
+			productRefGroup = CDA0B39C246A17CA005BF0E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDA0B39A246A17CA005BF0E7 /* emott */,
+				CDA0B3B0246A17CE005BF0E7 /* emottTests */,
+				CDA0B3BB246A17CE005BF0E7 /* emottUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDA0B399246A17CA005BF0E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA0B3AB246A17CE005BF0E7 /* LaunchScreen.storyboard in Resources */,
+				CDA0B3A8246A17CE005BF0E7 /* Preview Assets.xcassets in Resources */,
+				CDA0B3A5246A17CE005BF0E7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA0B3AF246A17CE005BF0E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA0B3BA246A17CE005BF0E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDA0B397246A17CA005BF0E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA0B39F246A17CA005BF0E7 /* AppDelegate.swift in Sources */,
+				CDA0B3A1246A17CA005BF0E7 /* SceneDelegate.swift in Sources */,
+				CD3DD466246F5FFD007B83D2 /* OpenWeatherViewModel.swift in Sources */,
+				CDA0B3DD246DD376005BF0E7 /* App.swift in Sources */,
+				CD3DD468246FA0F2007B83D2 /* NetworkStateMachine.swift in Sources */,
+				CDA0B3D5246C8FA1005BF0E7 /* Store.swift in Sources */,
+				CDA0B3DF246DD54B005BF0E7 /* OpenWeather.swift in Sources */,
+				CDA0B3D8246DCD49005BF0E7 /* OpenWeatherService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA0B3AD246A17CE005BF0E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA0B3B6246A17CE005BF0E7 /* emottTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA0B3B8246A17CE005BF0E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA0B3C1246A17CE005BF0E7 /* emottUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDA0B3B3246A17CE005BF0E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDA0B39A246A17CA005BF0E7 /* emott */;
+			targetProxy = CDA0B3B2246A17CE005BF0E7 /* PBXContainerItemProxy */;
+		};
+		CDA0B3BE246A17CE005BF0E7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDA0B39A246A17CA005BF0E7 /* emott */;
+			targetProxy = CDA0B3BD246A17CE005BF0E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CDA0B3A9246A17CE005BF0E7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDA0B3AA246A17CE005BF0E7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDA0B3C3246A17CE005BF0E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDA0B3C4246A17CE005BF0E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDA0B3C6246A17CE005BF0E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"emott/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = emott/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dialexa.emott;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDA0B3C7246A17CE005BF0E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"emott/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = emott/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dialexa.emott;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CDA0B3C9246A17CE005BF0E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = emottTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dialexa.emottTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/emott.app/emott";
+			};
+			name = Debug;
+		};
+		CDA0B3CA246A17CE005BF0E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = emottTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dialexa.emottTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/emott.app/emott";
+			};
+			name = Release;
+		};
+		CDA0B3CC246A17CE005BF0E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = emottUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dialexa.emottUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = emott;
+			};
+			name = Debug;
+		};
+		CDA0B3CD246A17CE005BF0E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = emottUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dialexa.emottUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = emott;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDA0B396246A17CA005BF0E7 /* Build configuration list for PBXProject "emott" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA0B3C3246A17CE005BF0E7 /* Debug */,
+				CDA0B3C4246A17CE005BF0E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDA0B3C5246A17CE005BF0E7 /* Build configuration list for PBXNativeTarget "emott" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA0B3C6246A17CE005BF0E7 /* Debug */,
+				CDA0B3C7246A17CE005BF0E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDA0B3C8246A17CE005BF0E7 /* Build configuration list for PBXNativeTarget "emottTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA0B3C9246A17CE005BF0E7 /* Debug */,
+				CDA0B3CA246A17CE005BF0E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDA0B3CB246A17CE005BF0E7 /* Build configuration list for PBXNativeTarget "emottUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA0B3CC246A17CE005BF0E7 /* Debug */,
+				CDA0B3CD246A17CE005BF0E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CDA0B3D0246B16F3005BF0E7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+		CDA0B3D9246DD101005BF0E7 /* XCRemoteSwiftPackageReference "Willow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Nike-Inc/Willow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CDA0B3D1246B16F3005BF0E7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDA0B3D0246B16F3005BF0E7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CDA0B3DA246DD101005BF0E7 /* Willow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDA0B3D9246DD101005BF0E7 /* XCRemoteSwiftPackageReference "Willow" */;
+			productName = Willow;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CDA0B393246A17CA005BF0E7 /* Project object */;
+}

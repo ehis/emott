@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": null,
+          "revision": "fca036f7aeca07124067cb6e0c12b0ad6359e3d4",
+          "version": "5.1.0"
+        }
+      },
+      {
+        "package": "Willow",
+        "repositoryURL": "https://github.com/Nike-Inc/Willow",
+        "state": {
+          "branch": null,
+          "revision": "816ff0129ca61cae3d00ca82dadce7f759d29ce9",
+          "version": "6.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
