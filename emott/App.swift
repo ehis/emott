@@ -12,33 +12,47 @@ struct App: View {
     @ObservedObject var openWeatherViewModel = OpenWeatherViewModel()
     
     var body: some View {
-        VStack {
-            Group {
-                if self.openWeatherViewModel.openWeatherRequestState == .loading {
-                    Text("Loading...")
-                        .padding()
-                } else if self.openWeatherViewModel.openWeatherRequestState == .success {
-                    VStack {
-                        Text(openWeatherViewModel.currentTempDetails())
-                        Text(openWeatherViewModel.currentWeatherDescription())
-                    }.padding()
-                } else if self.openWeatherViewModel.openWeatherRequestState == .failed {
-                    Text("Error reaching the server")
-                } else {
-                    Text("Oops something went wrong!!")
+        NavigationView {
+            VStack(alignment: .center) {
+                Group {
+                    if self.openWeatherViewModel.openWeatherRequestState == .loading {
+                        Text("Loading...").font(.largeTitle)
+                            .padding()
+                    } else if self.openWeatherViewModel.openWeatherRequestState == .success {
+                        VStack {
+                            Text(openWeatherViewModel.currentTemp())
+                                .font(.largeTitle)
+                            Text(openWeatherViewModel.currentWeatherDescription())
+                                .font(.title)
+                        }.padding()
+                    } else if self.openWeatherViewModel.openWeatherRequestState == .failed {
+                        Text("Error reaching the server")
+                    } else {
+                        Text("Oops something went wrong!!")
+                    }
                 }
+                
+                Image(systemName: self.openWeatherViewModel.currentWeatherIcon())
+                    .font(.system(size: 100))
             }
-      
-            Image(systemName: "umbrella.fill")
-                .font(.system(size: 100))
+            .padding()
+//        NavigationLink(destination: /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) { /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Content@*/Text("Navigate")/*@END_MENU_TOKEN@*/ }
         }
+        .animation(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+
     }
 }
 
 struct App_Previews: PreviewProvider {
     static var previews: some View {
-        App(openWeatherViewModel: OpenWeatherViewModel(openWeatherService: FakeOpenWeatherService()
-        ))
-            .environmentObject(Store())
+        Group {
+            App(openWeatherViewModel: OpenWeatherViewModel(openWeatherService: OpenWeatherService()
+            ))
+            App(openWeatherViewModel: OpenWeatherViewModel(openWeatherService: FakeOpenWeatherService()
+            ))
+            App(openWeatherViewModel: OpenWeatherViewModel(openWeatherService: FakeOpenWeatherService()
+            ))
+                .environment(\.colorScheme, .dark)
+        }
     }
 }

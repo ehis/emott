@@ -24,6 +24,8 @@
 		CDA0B3DB246DD101005BF0E7 /* Willow in Frameworks */ = {isa = PBXBuildFile; productRef = CDA0B3DA246DD101005BF0E7 /* Willow */; };
 		CDA0B3DD246DD376005BF0E7 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0B3DC246DD376005BF0E7 /* App.swift */; };
 		CDA0B3DF246DD54B005BF0E7 /* OpenWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0B3DE246DD54B005BF0E7 /* OpenWeather.swift */; };
+		CDA4385B24738FE700758C91 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDA4385A24738FE700758C91 /* README.md */; };
+		CDA4385F2473908800758C91 /* dark-mode-screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA4385E2473908700758C91 /* dark-mode-screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		CDA0B3D7246DCD49005BF0E7 /* OpenWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherService.swift; sourceTree = "<group>"; };
 		CDA0B3DC246DD376005BF0E7 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		CDA0B3DE246DD54B005BF0E7 /* OpenWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeather.swift; sourceTree = "<group>"; };
+		CDA4385A24738FE700758C91 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CDA4385E2473908700758C91 /* dark-mode-screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark-mode-screenshot.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 		CDA0B392246A17CA005BF0E7 = {
 			isa = PBXGroup;
 			children = (
+				CDA4385E2473908700758C91 /* dark-mode-screenshot.png */,
+				CDA4385A24738FE700758C91 /* README.md */,
 				CDA0B39D246A17CA005BF0E7 /* emott */,
 				CDA0B3B4246A17CE005BF0E7 /* emottTests */,
 				CDA0B3BF246A17CE005BF0E7 /* emottUITests */,
@@ -307,6 +313,8 @@
 			files = (
 				CDA0B3AB246A17CE005BF0E7 /* LaunchScreen.storyboard in Resources */,
 				CDA0B3A8246A17CE005BF0E7 /* Preview Assets.xcassets in Resources */,
+				CDA4385B24738FE700758C91 /* README.md in Resources */,
+				CDA4385F2473908800758C91 /* dark-mode-screenshot.png in Resources */,
 				CDA0B3A5246A17CE005BF0E7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
