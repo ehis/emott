@@ -12,11 +12,11 @@ class OpenWeatherViewModel: ObservableObject {
     @Published private (set) var openWeather: OpenWeather?
     @Published private (set) var openWeatherRequestState: NetworkStateMachine = .idle
     
-    var openWeatherService: OpenWeatherService
+    var openWeatherService: OpenWeatherServiceProtocol
     
-    init() {
-        self.openWeatherService = OpenWeatherService()
-        // fetch current weather
+    init(openWeatherService: OpenWeatherServiceProtocol = OpenWeatherService()) {
+        self.openWeatherService = openWeatherService
+            // fetch current weather
         self.fetchCurrentWeather()
     }
     
@@ -50,6 +50,6 @@ class OpenWeatherViewModel: ObservableObject {
                 return "No available weather description"
         }
         
-        return "\(activeWeather.main) \(activeWeather.description)"
+        return "\(activeWeather.main)"
     }
 }

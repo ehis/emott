@@ -11,7 +11,7 @@ import Alamofire
 import Combine
 import Willow
 
-struct OpenWeatherService {
+struct OpenWeatherService: OpenWeatherServiceProtocol {
     let log = Logger(logLevels: [.all], writers: [ConsoleWriter()])
     private let host: String = "https://api.openweathermap.org/data/2.5/weather"
     private let key: String = "e55f53380debde659a4de59fdcbc7904"

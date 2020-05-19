@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct App: View {
-    @EnvironmentObject var store: Store
     @ObservedObject var openWeatherViewModel = OpenWeatherViewModel()
     
     var body: some View {
@@ -38,6 +37,8 @@ struct App: View {
 
 struct App_Previews: PreviewProvider {
     static var previews: some View {
-        App().environmentObject(Store())
+        App(openWeatherViewModel: OpenWeatherViewModel(openWeatherService: FakeOpenWeatherService()
+        ))
+            .environmentObject(Store())
     }
 }
