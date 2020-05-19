@@ -10,13 +10,14 @@ import SwiftUI
 
 struct App: View {
     @ObservedObject var openWeatherViewModel = OpenWeatherViewModel()
+    @State var show = false
     
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
                 Group {
                     if self.openWeatherViewModel.openWeatherRequestState == .loading {
-                        Text("Loading...").font(.largeTitle)
+                        Text("loading...").font(.largeTitle)
                             .padding()
                     } else if self.openWeatherViewModel.openWeatherRequestState == .success {
                         VStack {
@@ -34,14 +35,24 @@ struct App: View {
                     }
                 }
                 
-                Image(systemName: self.openWeatherViewModel.currentWeatherIcon())
-                    .font(.system(size: 100))
+                Button(action: {
+                    withAnimation {
+                        self.show.toggle()
+                    }
+                }) {
+                    Image(systemName: self.openWeatherViewModel.currentWeatherIcon())
+                        .font(.system(size: 96)).scaleEffect(show ? 1.5 : 1)
+                        .animation(.spring())
+                }
+                .padding(24)
+                
+                
             }
             .padding()
-//        NavigationLink(destination: /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) { /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Content@*/Text("Navigate")/*@END_MENU_TOKEN@*/ }
+            //        NavigationLink(destination: /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) { /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Content@*/Text("Navigate")/*@END_MENU_TOKEN@*/ }
         }
         .animation(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-
+        
     }
 }
 
