@@ -11,6 +11,7 @@
 		CD02FF5D247353FD00B2A819 /* FakeOpenWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD02FF5C247353FD00B2A819 /* FakeOpenWeatherService.swift */; };
 		CD3DD466246F5FFD007B83D2 /* OpenWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3DD465246F5FFD007B83D2 /* OpenWeatherViewModel.swift */; };
 		CD3DD468246FA0F2007B83D2 /* NetworkStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3DD467246FA0F2007B83D2 /* NetworkStateMachine.swift */; };
+		CD878E3A24746E13007936D9 /* OpenWeatherViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD878E3924746E13007936D9 /* OpenWeatherViewModelTests.swift */; };
 		CDA0B39F246A17CA005BF0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0B39E246A17CA005BF0E7 /* AppDelegate.swift */; };
 		CDA0B3A1246A17CA005BF0E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0B3A0246A17CA005BF0E7 /* SceneDelegate.swift */; };
 		CDA0B3A5246A17CE005BF0E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA0B3A4246A17CE005BF0E7 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		CD02FF5C247353FD00B2A819 /* FakeOpenWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeOpenWeatherService.swift; sourceTree = "<group>"; };
 		CD3DD465246F5FFD007B83D2 /* OpenWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherViewModel.swift; sourceTree = "<group>"; };
 		CD3DD467246FA0F2007B83D2 /* NetworkStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStateMachine.swift; sourceTree = "<group>"; };
+		CD878E3924746E13007936D9 /* OpenWeatherViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherViewModelTests.swift; sourceTree = "<group>"; };
 		CDA0B39B246A17CA005BF0E7 /* emott.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emott.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA0B39E246A17CA005BF0E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDA0B3A0246A17CA005BF0E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				CDA0B3B5246A17CE005BF0E7 /* emottTests.swift */,
 				CDA0B3B7246A17CE005BF0E7 /* Info.plist */,
+				CD878E3924746E13007936D9 /* OpenWeatherViewModelTests.swift */,
 			);
 			path = emottTests;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDA0B3B6246A17CE005BF0E7 /* emottTests.swift in Sources */,
+				CD878E3A24746E13007936D9 /* OpenWeatherViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

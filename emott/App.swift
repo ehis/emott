@@ -22,8 +22,10 @@ struct App: View {
                         VStack {
                             Text(openWeatherViewModel.currentTemp())
                                 .font(.largeTitle)
-                            Text(openWeatherViewModel.currentWeatherDescription())
+                            Text(openWeatherViewModel.currentMainWeather())
                                 .font(.title)
+                            Text(openWeatherViewModel.currentWeatherDescription())
+                                .font(.body).padding(.vertical)
                         }.padding()
                     } else if self.openWeatherViewModel.openWeatherRequestState == .failed {
                         Text("Error reaching the server")

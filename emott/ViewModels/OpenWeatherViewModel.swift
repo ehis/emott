@@ -16,7 +16,7 @@ class OpenWeatherViewModel: ObservableObject {
     
     init(openWeatherService: OpenWeatherServiceProtocol = OpenWeatherService()) {
         self.openWeatherService = openWeatherService
-            // fetch current weather
+        // Fetch current weather
         self.fetchCurrentWeather()
     }
     
@@ -25,7 +25,7 @@ class OpenWeatherViewModel: ObservableObject {
         self.openWeatherService.currentWeather {
             result in
             self.openWeather = result
-
+            
             if result == nil {
                 self.openWeatherRequestState = .failed
             } else {
@@ -43,38 +43,44 @@ class OpenWeatherViewModel: ObservableObject {
         }
     }
     
-    func currentWeatherDescription() -> String {
-        guard let weather = self.openWeather?.weather,
-            !weather.isEmpty,
-            let activeWeather = weather.first
+    func currentMainWeather() -> String {
+        guard let main = self.openWeather?.weather.first?.main
             else {
-                return "No available weather description"
+                return "Oops it's a weird day 😲"
         }
         
-        return "\(activeWeather.main)"
+        return main.lowercased()
+    }
+    
+    func currentWeatherDescription() -> String {
+        guard let description = self.openWeather?.weather.first?.description else {
+            return "No available weather description"
+        }
+        
+        return description.lowercased()
     }
     
     func currentWeatherIcon() -> String {
         if let main = self.openWeather?.weather.first?.main.lowercased() {
             switch main {
-            case "thunderstorm":
-                return "cloud.bolt.fill"
-            case "rain":
-                return "cloud.rain.fill"
-            case "snow":
-                return "cloud.snow.fill"
-            case "mist", "fog":
-                return "cloud.fog.fill"
-            case "smoke":
-                return "smoke.fill"
-            case "tornado":
-                return "tornado"
-            case "clear":
-                return "cloud.sun.fill"
-            case "clouds":
-                return "cloud.fill"
-            default:
-                return "questionmark.circle.fill"
+                case "thunderstorm":
+                    return "cloud.bolt.fill"
+                case "rain":
+                    return "cloud.rain.fill"
+                case "snow":
+                    return "cloud.snow.fill"
+                case "mist", "fog":
+                    return "cloud.fog.fill"
+                case "smoke":
+                    return "smoke.fill"
+                case "tornado":
+                    return "tornado"
+                case "clear":
+                    return "cloud.sun.fill"
+                case "clouds":
+                    return "cloud.fill"
+                default:
+                    return "questionmark.circle.fill"
             }
         } else {
             return "clouds"
@@ -86,7 +92,7 @@ class OpenWeatherViewModel: ObservableObject {
     }
     
     func convertKelvinToFahrenheit(from kelvin: Double) -> Double {
-//        Formula 1.8(K - 273) + 32
+        //        Formula 1.8(K - 273) + 32
         return 1.8 * (kelvin - 273) + 32
     }
 }
