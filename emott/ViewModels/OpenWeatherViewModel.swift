@@ -83,7 +83,7 @@ class OpenWeatherViewModel: ObservableObject {
                     return "questionmark.circle.fill"
             }
         } else {
-            return "clouds"
+            return "exclamationmark.icloud.fill"
         }
     }
     

@@ -45,6 +45,7 @@ struct App: View {
                         .animation(.spring())
                 }
                 .padding(24)
+            .accessibility(label: Text("Image zooms on tap"))
                 
                 
             }
