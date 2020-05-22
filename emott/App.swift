@@ -42,18 +42,14 @@ struct App: View {
                 }) {
                     Image(systemName: self.openWeatherViewModel.currentWeatherIcon())
                         .font(.system(size: 96)).scaleEffect(show ? 1.5 : 1)
-                        .animation(.spring())
+                        .animation(.easeIn(duration: 1))
                 }
                 .padding(24)
-            .accessibility(label: Text("Image zooms on tap"))
-                
-                
+                .accessibility(label: Text("Image zooms on tap"))
             }
             .padding()
             //        NavigationLink(destination: /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) { /*@START_MENU_TOKEN@*/ /*@PLACEHOLDER=Content@*/Text("Navigate")/*@END_MENU_TOKEN@*/ }
         }
-        .animation(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-        
     }
 }
 
