@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
-      - name: Force XCode 11.3
+      - name: Force XCode 11.5
         run: sudo xcode-select -switch /Applications/Xcode_11.5.app
       - name: Testing iOS app
         run: exec ./.github/scripts/test_app.sh
